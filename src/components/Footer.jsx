@@ -2,11 +2,7 @@
 import phoneIcon from '../assets/icons-svgs/phoneIcon.svg'
 import mailIcon from '../assets/icons-svgs/emailicon.svg'
 import locationIcon from '../assets/icons-svgs/locationIcon.svg'
-import xIcon from '../assets/icons-svgs/xIcon.svg'
 import globe from '../assets/icons-svgs/globeIcon.svg'
-import facebookIcon from '../assets/icons-svgs/facebookIcon.svg'
-import instagramIcon from '../assets/icons-svgs/instagramIcon.svg'
-import linkedInIcon from '../assets/icons-svgs/linkedInIcon.svg'
 export default function Footer(){
     return(
         <footer>
