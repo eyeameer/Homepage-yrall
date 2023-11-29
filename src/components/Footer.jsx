@@ -1,6 +1,6 @@
 
 import phoneIcon from '../assets/icons-svgs/phoneIcon.svg'
-import mailIcon from '../assets/icons-svgs/emailicon.svg'
+import mailIcon from '../assets/icons-svgs/emailIcon.svg'
 import locationIcon from '../assets/icons-svgs/locationIcon.svg'
 import globe from '../assets/icons-svgs/globeIcon.svg'
 export default function Footer(){
