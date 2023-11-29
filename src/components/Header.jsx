@@ -1,6 +1,6 @@
 import locationIcon from '../assets/icons-svgs/locationIcon.svg'
 import phoneIcon from '../assets/icons-svgs/phoneIcon.svg'
-import mailIcon from '../assets/icons-svgs/emailicon.svg'
+import mailIcon from '../assets/icons-svgs/emailIcon.svg'
 import xIcon from '../assets/icons-svgs/xIcon.svg'
 import facebookIcon from '../assets/icons-svgs/facebookIcon.svg'
 import instagramIcon from '../assets/icons-svgs/instagramIcon.svg'
