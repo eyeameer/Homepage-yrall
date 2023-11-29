@@ -87,7 +87,7 @@ export default function Header() {
                             </div>
                             <button
                                 onClick={toggleMobileNav}
-                                className="absolute bottom-8 text-black text-primaryColor text-3xl right-6"
+                                className="absolute bottom-20 text-black text-primaryColor text-3xl right-6"
                             >
                                 <BsX />
                             </button>
