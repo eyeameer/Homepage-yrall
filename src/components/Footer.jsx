@@ -3,11 +3,12 @@ import phoneIcon from '../assets/icons-svgs/phoneIcon.svg'
 import mailIcon from '../assets/icons-svgs/emailIcon.svg'
 import locationIcon from '../assets/icons-svgs/locationIcon.svg'
 import globe from '../assets/icons-svgs/globeIcon.svg'
+import footerLogo from '../assets/default-logos/footerLogo.svg'
 export default function Footer(){
     return(
         <footer>
                 <div className="flex overflow-hidden flex-col  items-center justify-center gap-[10px] lg:px-[10px] py-0 relative bg-[#03989e]">
-      <div className="flex flex-col lg:flex-row lg:w-[1152px] gap-3 items-start justify-between px-5 lg:px-[20px] py-[40px] relative flex-[0_0_auto]">
+      <div className="flex flex-col lg:flex-row xl:w-[1152px] gap-3 items-start justify-between px-5 lg:px-[20px] py-[40px] relative flex-[0_0_auto]">
         <div className="flex flex-col lg:w-[412px] items-start justify-center gap-[15px] relative">
           <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
             <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins-Medium',Helvetica] font-medium text-white text-[24px] text-center tracking-[0] leading-[normal]">

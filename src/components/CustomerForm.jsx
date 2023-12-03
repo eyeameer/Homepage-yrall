@@ -58,7 +58,7 @@ export default function CustomerForm(){
               </div>
              </div>
              <CheckboxComp/>
-              <div className="col-span-12 flex flex-col lg:flex-row gap-5 mb-2 mx:-mb-5 items-center">
+              <div className="col-span-12 flex flex-col xl:flex-row gap-5 mb-2 mx:-mb-5 items-center">
                   <div id='gradient-bg-div' className="px-2 py-1 flex justify-center items-center gap-2  rounded-full text-sm">
 
                     <Checkbox  className='border-2 border-white rounded-sm'/>

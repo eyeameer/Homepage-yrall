@@ -159,8 +159,150 @@ body{
   --liner: linear-gradient(90deg, #252525 -2.11%, #03989E 105.63%);
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-out;
+}
 
 
 #gradient-bg-div{
   background: var(--liner);
+}
+/* #aboutpageBg{
+  position: relative;
+
+  height: 300px;
+
+} */
+#aboutpageBg{
+  background-image:url('./assets/aboutPage-images/aboutpageBgImg.jpg');
+  background-size:cover;
+  /* height: 300px; */
+  /* opacity:0.4;
+  content: "";
+  position: absolute; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 300px;
+
+ 
+}
+#chooseUsDiv{
+  background-image:url('./assets/aboutPage-images/chooseUsBg.svg');
+  background-size:cover;
+  /* height: 300px; */
+  /* opacity:0.4;
+  content: "";
+  position: absolute; */
+  /* top: 0;
+  left: 0; */
+  
+  width: 100%;
+
+ 
+}
+@media (max-width: 600px) {
+  body {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #aboutpageBg{
+    background-size:contain;
+   
+  }
+}
+
+.word-animation {
+  font-size: 2em;
+  position: relative;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-30px, -30px);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+  75% {
+    transform: translate(-30px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+@keyframes converge {
+  0% {
+    transform: translate(-50px, -50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes converge2 {
+  0% {
+    transform: translate(50px, -50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes converge3 {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.animate-title {
+  animation: converge 2s forwards;
+  position: absolute;
+ 
+}
+
+.animate-title2 {
+  animation: converge2 2s forwards;
+  position: absolute;
+}
+
+.animate-title3 {
+  animation: converge3 2s forwards;
+  position: absolute;
 }

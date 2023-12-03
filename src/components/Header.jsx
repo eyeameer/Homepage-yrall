@@ -6,81 +6,74 @@ import facebookIcon from '../assets/icons-svgs/facebookIcon.svg'
 import instagramIcon from '../assets/icons-svgs/instagramIcon.svg'
 import linkedInIcon from '../assets/icons-svgs/linkedinIcon.svg'
 import logo from '../assets/default-logos/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BsX, BsTelephoneFill, BsList } from "react-icons/bs";
 import menuIcon from '../assets/default-logos/menuIcon.svg'
 export default function Header() {
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation().pathname
+   
     const toggleMobileNav = () => {
         setIsOpen(!isOpen);
     };
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.matchMedia("(max-width: 1024px)").matches);
+            setIsMobile(window.matchMedia("(max-width: 900px)").matches);
         };
         window.addEventListener("resize", handleResize);
         handleResize();
         return () => window.removeEventListener("resize", handleResize);
     }, []);
     return (
-        <header className=' shadow-bottom  mr-0'>
+        <header className=' shadow-bottom mr-0'>
             {
                 isMobile ?
-                    <div className='p-5 w-screen  flex justify-between items-center'>
-                        <div className=''>
+                    <div className='p-5 w-full shadow-bottom bg-white !z-[200] fixed flex justify-between items-center'>
+                        <Link to='/' className=''>
                             <img src={logo} width={55} alt="" />
-                        </div>
+                        </Link>
                         <nav
                             id='menuBgImg'
                             className={`${isOpen ? "translate-x-0" : "-translate-x-full"
-                                } absolute !z-[80] flex justify-center border-y-primaryColor border-r-primaryColor border-4 borderl-none rounded-r-3xl top-0 left-0 min-h-screen w-64 bg-white text-primaryColor  transform transition duration-200 ease-in-out`}
+                                } absolute !z-[80]  flex justify-center border-y-primaryColor border-r-primaryColor border-4 borderl-none rounded-r-3xl top-0 left-0 min-h-screen w-64 bg-white text-primaryColor  transform transition duration-200 ease-in-out`}
                         >
                             <div className=" w-full flex flex-col space-y-12 ">
-                                <div className=" pt-12  w-full flex gap-4 justify-center items-center ">
+                                <Link to='/' className="pt-12 ml-2 w-full flex gap-4 justify-center items-center ">
                                     <img className='bg-' src={logo} width={45} alt="" />
-                                </div>
+                                </Link>
                                 <ul className="flex space-y-8 mr-auto flex-col pl-9 w-full ">
-                                    <li className={`${location === '/' ? 'bg-[#1E0552] rounded-full' : ''}`}
-                                        style={
-                                            location === '/' ?
-                                                {
-                                                } : {}}
-                                    >
+                                    
                                         <div className="block p-2 flex gap-6 justify-center  items-center rounded-md hover:bg-gray-700">
                                                     
-                                            <Link to="/">Home</Link>
+                                            <Link className={`${location==='/'?'text-white bg-primaryColor p-3 rounded-md':''}`} to="/">Home</Link>
                                         </div>
-                                    </li>
-                                    <li className={`${location === '/about-us' ? 'bg-[#1E0552] rounded-full' : ''}`}
-
-                                    >
+                                 
+       
                                         <div className="block p-2 flex gap-6 justify-center items-center rounded-md hover:bg-gray-700">
                                  
-                                            <Link to="/about">About</Link>
+                                            <Link className={`${location==='/about'?'text-white bg-primaryColor p-3 rounded-md':''}`} to="/about">About</Link>
                                         </div>
-                                    </li>
-                                    <li className={`${location === '/blog' ? 'bg-[#1E0552] rounded-full' : ''}`}>
+                                    
+
                                         <div className="block p-2 flex gap-6 justify-center items-center rounded-md hover:bg-gray-700">
                                          
-                                            <Link href="/services">Services</Link>
+                                            <Link className={`${location==='/services'?'text-white bg-primaryColor p-3 rounded-md':''}`} to="/services">Services</Link>
                                         </div>
-                                    </li>
-                                    <li className={`${location === '/careers' ? 'bg-[#1E0552] rounded-full' : ''}`}
-
-                                    >
+   
+          
                                         <div className="block p-2 flex gap-6 justify-center items-center rounded-md hover:bg-gray-700">
                                         
-                                            <Link to="/portfolio">Portfolio</Link>
+                                            <Link className={`${location==='/portfolio'?'text-white bg-primaryColor p-3 rounded-md':''}`} to="/portfolio">Portfolio</Link>
                                         </div>
-                                    </li>
+                                   
                                     <li className={`${location === '/contact-us' ? 'bg-[#1E0552] rounded-full' : ''}`}
 
                                     >
                                         <div className="block p-2 flex gap-6 justify-center items-center rounded-md hover:bg-gray-700">
                                           
-                                            <Link to="/blogs">Blogs</Link>
+                                            <Link className={`${location==='/blogs'?'text-white bg-primaryColor p-3 rounded-md':''}`} to="/blogs">Blogs</Link>
                                         </div>
                                     </li>
                                 </ul>
@@ -111,7 +104,7 @@ export default function Header() {
                     :
 
                     <div className="flex flex-col">
-                        <div className="bg-[#03989E] py-1 px-[200px] flex justify-between">
+                        <div className="bg-[#03989E] py-1 lg:px-[100px] xl:px-[200px] flex justify-between">
                             <div className='flex gap-5 text-[#ffffffcc]  text-xs '>
                                 <div className='flex justify-center items-center gap-2 capitalize '>
                                     <img className='' src={locationIcon} alt="" />
@@ -142,16 +135,16 @@ export default function Header() {
                                 </a>
                             </div>
                         </div>
-                        <div className='px-[200px]  pt-8 pb-3 flex justify-between items-center'>
-                            <div className=''>
+                        <div className='xl:px-[200px] lg:px-[100px]  pt-8 pb-3 flex justify-between items-center'>
+                            <Link to='/' className=''>
                                 <img src={logo} alt="" />
-                            </div>
+                            </Link>
                             <nav className='flex gap-8'>
-                                <Link to='/home'>Home</Link>
-                                <Link to='/about'>About</Link>
-                                <Link to='/services'>Services</Link>
-                                <Link to='/portfolio'>Portfolio</Link>
-                                <Link to='/blogs'>Blogs</Link>
+                                <Link className={`${location==='/'?'text-primaryColor':""}  text-[18px]`} to='/'>Home</Link>
+                                <Link className={`${location==='/about'?'text-primaryColor':""} text-[18px]`} to='/about'>About</Link>
+                                <Link className={`${location==='/services'?'text-primaryColor':""} text-[18px]`} to='/services'>Services</Link>
+                                <Link className={`${location==='/portfolio'?'text-primaryColor':""} text-[18px]`} to='/portfolio'>Portfolio</Link>
+                                <Link className={`${location==='/blogs'?'text-primaryColor':""} text-[18px]`} to='/blogs'>Blogs</Link>
                             </nav>
                         </div>
                     </div>
