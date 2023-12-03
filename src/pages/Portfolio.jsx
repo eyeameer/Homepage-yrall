@@ -3,7 +3,7 @@ import SpotlightCard from "../components/SpotlightCard";
 import portfolioHomeImg from '../assets/portfolioPage-images/portfolioHomeImg.svg'
 import CustomerForm from "../components/CustomerForm";
 import HeadingCard from "../components/HeadingCard";
-import ClientIcon from '../assets/portfolioPage-images/ClientIcon.svg'
+import ClientIcon from '../assets/portfolioPage-images/clientIcon.svg'
 import ProjectsCard from "../components/ProjectsCard";
 export default function Portfolio(){
     return(
