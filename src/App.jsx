@@ -8,6 +8,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import Blogs from './pages/Blogs'
+import Blog from './pages/Blog'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/services' element={<Services/>}></Route>
       <Route path='/portfolio' element={<Portfolio/>}></Route>
       <Route path='/blogs' element={<Blogs/>}></Route>
+      <Route path='/blog/:id' element={<Blog/>}></Route>
       </Routes>
 
     </BrowserRouter>

@@ -59,60 +59,8 @@ export default function HomePage(){
             </p>
           </div>
         </div>
-        {/* <div className="flex  flex-wrap xl:w-[1150px] items-center justify-center xxl:items-start xl:justify-between gap-[24px_24px] relative flex-[0_0_auto]">
-          <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[#ffdcd899]  text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              01
-            </div>
-            <p className="w-[257px] ml-[-97px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] relative text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-          <div className="inline-flex items-center relative flex-[0_0_auto]">
-            <div className="text-[#dec2ff99] relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              02
-            </div>
-            <p className="relative w-[257px] ml-[-122px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-          <div className="inline-flex items-center relative flex-[0_0_auto]">
-            <div className="text-[#b0eff299] relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              03
-            </div>
-            <p className="relative w-[257px] ml-[-122px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-          <div className="inline-flex items-center relative flex-[0_0_auto]">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[#ffdcd899] text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              04
-            </div>
-            <p className="w-[257px] ml-[-98px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] relative text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-          <div className="inline-flex items-center relative flex-[0_0_auto]">
-            <div className="text-[#dec2ff99] relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              05
-            </div>
-            <p className="relative w-[257px] ml-[-122px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-          <div className="inline-flex items-center relative flex-[0_0_auto]">
-            <div className="text-[#b0eff299] relative w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">
-              06
-            </div>
-            <p className="relative w-[257px] ml-[-122px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#252525] text-[16px] tracking-[0] leading-[20.0px]">
-              Torem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.torem Ipsum Dolor Sit Amet,
-            </p>
-          </div>
-        </div> */}
-
- 
     <div className="grid grid-cols-12  gap-[60px] sm:gap-[62px]  xl:gap-[80px]">
-          <div className="xl:col-span-4  items-center  sm:col-span-6 col-span-12 relative">
+          <div className="xl:col-span-4   items-center  sm:col-span-6 col-span-12 relative">
             <div className=" w-fit mt-[-1.00px] [font-family:'Oswald-Bold',Helvetica] font-bold text-[#ffdcd899]  text-[176px] tracking-[0] leading-[219.5px] whitespace-nowrap">01</div>
             <p className="absolute text-sm top-20 left-20 w-[230px]">
             Torem ipsum dolor sit amet, consectetur adipiscing elit.Torem ipsum dolor sit amet, 
@@ -253,3 +201,7 @@ export default function HomePage(){
         </Layout>
     )
 }
+
+
+
+

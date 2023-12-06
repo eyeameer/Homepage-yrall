@@ -6,6 +6,36 @@ import SpotlightCard from "../components/SpotlightCard";
 import HeadingCard from "../components/HeadingCard";
 import BlogCard from "../components/BlogCard";
 import blogThumbnail from '../assets/blogPage-images/blogThumbnail.svg'
+const blogsData=[
+    {
+        image:blogThumbnail,
+        category:'category 1',
+        description:'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.',
+        title:'article name-headline for an article',
+        id:1
+    },
+    {
+        image:blogThumbnail,
+        category:'category 1',
+        description:'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.',
+        title:'article name-headline for an article',
+        id:2
+    },
+    {
+        image:blogThumbnail,
+        category:'category 1',
+        description:'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.',
+        title:'article name-headline for an article',
+        id:3
+    },
+    {
+        image:blogThumbnail,
+        category:'category 1',
+        description:'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.',
+        title:'article name-headline for an article',
+        id:4
+    },
+]
 export default function Blogs(){
     return(
         <Layout>
@@ -24,31 +54,18 @@ export default function Blogs(){
 
                     </section>
                     <section className="grid grid-cols-12 gap-4">
-                        <BlogCard
-                        image={<img src={blogThumbnail} />}
-                        category='category 1'
-                        description='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.'
-                        title='article name-headline for an article'
-                        />
-                        <BlogCard
-                        image={<img src={blogThumbnail} />}
-                        category='category 1'
-                        description='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.'
-                        title='article name-headline for an article'
-                        />
-                        <BlogCard
-                        image={<img src={blogThumbnail} />}
-                        category='category 1'
-                        description='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.'
-                        title='article name-headline for an article'
-                        />
-                        <BlogCard
-                        image={<img src={blogThumbnail} />}
-                        category='category 1'
-                        description='Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.'
-                        title='article name-headline for an article'
-                        />
-                        
+                        {
+                            blogsData.map((blog)=>(
+                                <BlogCard
+                                id={blog.id}
+                                key={blog.id}
+                                image={<img src={blog.image} />}
+                                category={blog.category}
+                                description={blog.description}
+                                title={blog.title}
+                                />
+                            ))
+                        }
                     </section>
                         <CustomersComponent/>
                         <CustomerForm/>

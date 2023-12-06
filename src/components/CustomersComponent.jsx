@@ -1,4 +1,31 @@
 import { ReviewCard } from "./ReviewCard"
+import reviewUser from '../assets/homepage-images/reviewUser.svg'
+const reviews=[
+  {
+    name:'Mark Zuck',
+    description:'was the simplest and easiest insurance I’ve ever purchased, “old” insurance companies need to step into the current century!!! 👏 👏 👏',
+    mention:'@thetenantconnect',
+    pfp:reviewUser
+  },
+  {
+    name:'Mark Zuck',
+    description:'was the simplest and easiest insurance I’ve ever purchased, “old” insurance companies need to step into the current century!!! 👏 👏 👏',
+    mention:'@thetenantconnect',
+    pfp:reviewUser
+  },
+  {
+    name:'Mark Zuck',
+    description:'was the simplest and easiest insurance I’ve ever purchased, “old” insurance companies need to step into the current century!!! 👏 👏 👏',
+    mention:'@thetenantconnect',
+    pfp:reviewUser
+  },
+  {
+    name:'Mark Zuck',
+    description:'was the simplest and easiest insurance I’ve ever purchased, “old” insurance companies need to step into the current century!!! 👏 👏 👏',
+    mention:'@thetenantconnect',
+    pfp:reviewUser
+  },
+]
 export default function CustomersComponent(){
     return(
         <section className="flex flex-col gap-10 items-center justify-center">
@@ -11,9 +38,16 @@ export default function CustomersComponent(){
           </div>
         </div>
         <div className="grid grid-cols-12 gap-7">
-  {[1,2,3,4].map((card)=>{
+  {reviews.map((review,i)=>{
     return(
-      <div key={card} className="col-span-12 lg:col-span-6"><ReviewCard /></div>
+      <div key={i} className="col-span-12 lg:col-span-6">
+        <ReviewCard 
+          userPfp={review.pfp}  
+          name={review.name}
+          description={review.description}
+          mention={review.mention}
+      />
+      </div>
     )
   })}
 </div>

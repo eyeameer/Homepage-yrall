@@ -1,4 +1,6 @@
-export default function BlogCard({image,category,title,description}){
+import { useNavigate } from "react-router-dom"
+export default function BlogCard({image,category,title,description,id}){
+    const navigate=useNavigate()
     return(
         <div className="flex md:justify-center md:items-center lg:justify-normal lg:items-baseline lg:col-span-6 col-span-12 flex-col -space-y-10 mb-10">
             <div>
@@ -13,7 +15,11 @@ export default function BlogCard({image,category,title,description}){
             </div>
             <div className="flex lg:justify-normal lg:items-baseline md:justify-center md:items-center flex-col gap-5">
                 <p className="text-sm md:w-[69%] lg:w-auto text-justify">{description}</p>
-                <a className="underline text-[#252525] cursor-pointer text-sm">Read Now</a>
+                <a 
+                onClick={()=>{
+                    navigate(`/blog/${id}`)
+                }}
+                className="underline text-[#252525] cursor-pointer text-sm">Read Now</a>
             </div>
             </div>
         </div>
